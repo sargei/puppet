@@ -4,6 +4,10 @@ file { '/usr/local/bin/run-puppet':
   mode   => '0755',
 }
 
+file { '/tmp/hello.txt':
+  source => '/etc/puppetlabs/code/environments/production/files/hello.txt',
+}
+
 cron { 'run-puppet':
   command => '/usr/local/bin/run-puppet',
   hour    => '*',
