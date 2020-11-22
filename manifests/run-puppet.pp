@@ -1,11 +1,11 @@
 # Set up regular Puppet runs
 file { '/usr/local/bin/run-puppet':
-  source => '/etc/puppetlabs/code/environments/production/files/run-puppet.sh',
+  source => '/etc/puppet/code/environments/production/files/run-puppet.sh',
   mode   => '0755',
 }
 
 file { '/tmp/hello.txt':
-  source => '/etc/puppetlabs/code/environments/production/files/hello.txt',
+  source => '/etc/puppet/code/environments/production/files/hello.txt',
 }
 
 cron { 'run-puppet':
